@@ -30,7 +30,7 @@ Here's how you can set up `mailQuick` for different providers:
 const mailQuick = require('mailquick');
 
 // Initialize with provider and credentials
-const mailer = mailQuick.init({
+mailQuick.init({
     provider: 'sendgrid',
     apiKey: 'your-sendgrid-api-key',
     from: 'your-email@example.com',
@@ -38,7 +38,7 @@ const mailer = mailQuick.init({
 });
 
 // Send an email
-mailer.send({
+mailQuick.send({
     to: 'recipient@example.com',
     subject: 'Hello World',
     html: '<p>This is a test email sent using mailQuick!</p>'
@@ -54,7 +54,7 @@ mailer.send({
 #### MailerSend
 
 ```javascript
-const mailer = mailQuick.init({
+mailQuick.init({
     provider: 'mailersend',
     apiKey: 'your-mailersend-api-key',
     from: 'your-email@example.com',
@@ -65,7 +65,7 @@ const mailer = mailQuick.init({
 #### SendGrid
 
 ```javascript
-const mailer = mailQuick.init({
+mailQuick.init({
     provider: 'sendgrid',
     apiKey: 'your-sendgrid-api-key',
     from: 'your-email@example.com',
@@ -76,7 +76,7 @@ const mailer = mailQuick.init({
 #### Mailjet
 
 ```javascript
-const mailer = mailQuick.init({
+mailQuick.init({
     provider: 'mailjet',
     apiKey: 'your-mailjet-api-key',
     apiSecret: 'your-mailjet-api-secret',
@@ -88,7 +88,7 @@ const mailer = mailQuick.init({
 #### Brevo
 
 ```javascript
-const mailer = mailQuick.init({
+mailQuick.init({
     provider: 'brevo',
     apiKey: 'your-brevo-api-key',
     from: 'your-email@example.com',
@@ -99,7 +99,7 @@ const mailer = mailQuick.init({
 #### Postmark
 
 ```javascript
-const mailer = mailQuick.init({
+mailQuick.init({
     provider: 'postmark',
     apiKey: 'your-postmark-api-key',
     from: 'your-email@example.com',
@@ -118,7 +118,7 @@ Use the `send` method to dispatch an email. The required parameters are:
 Example:
 
 ```javascript
-mailer.send({
+mailQuick.send({
     to: 'recipient@example.com',
     subject: 'Welcome!',
     html: '<p>Thanks for signing up with mailQuick!</p>'
